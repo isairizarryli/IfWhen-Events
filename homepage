@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soluna Events | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Karla&family=Poppins&family=Satisfy&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --midnight-navy: #1F2A57;
+      --twilight-blue: #6183A6;
+      --lavender-mist: #B5B9D6;
+      --morning-blush: #F7DDD6;
+      --golden-glow: #FFF2A8;
+      --sunset-tangerine: #FAB88B;
+      --soft-background: #f5f1ed;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--soft-background);
+      font-family: 'Poppins', sans-serif;
+      color: var(--midnight-navy);
+    }
+
+    nav {
+      background-color: var(--lavender-mist);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      font-family: 'Karla', sans-serif;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: var(--midnight-navy);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--sunset-tangerine);
+    }
+
+    header {
+      text-align: center;
+      padding: 6rem 2rem 3rem;
+      background: linear-gradient(to right, var(--lavender-mist), var(--golden-glow), var(--sunset-tangerine));
+      font-family: 'Playfair Display', serif;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 0 auto;
+      font-family: 'Karla', sans-serif;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--twilight-blue);
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-family: 'Satisfy', cursive;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
+    }
+
+    .cta:hover {
+      background-color: var(--sunset-tangerine);
+      color: var(--midnight-navy);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Our Services</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="privacy.html">Privacy Policies</a>
+    <a href="terms.html">Terms and Conditions</a>
+  </nav>
+
+  <header>
+    <h1>Soluna Events</h1>
+    <p>Where celebrations rise with the sun and shine through the stars. Let’s plan a day full of intention, beauty, and joy — together.</p>
+    <a href="services.html" class="cta">Explore Our Services</a>
+  </header>
+</body>
+</html>
