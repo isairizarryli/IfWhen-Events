@@ -134,13 +134,19 @@
   <section class="contact-section">
     <h2>Let's Chat About Your Event</h2>
     <p>Ready to plan something magical? Fill out the form below and we’ll be in touch soon!</p>
-    <form>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <input type="text" name="event-type" placeholder="Type of Event (e.g. birthday, baby shower)" required>
       <textarea name="message" rows="5" placeholder="Tell us more about your vision!" required></textarea>
       <button type="submit">Send Message</button>
+      <input type="hidden" name="_subject" value="New Inquiry from Soluna Events Website">
+      <input type="hidden" name="_replyto" value="hello.solunaevents@gmail.com">
     </form>
+    <p style="text-align: center; margin-top: 2rem;">
+      Or reach us directly at <a href="mailto:hello.solunaevents@gmail.com" style="color: var(--twilight-blue); font-weight: bold;">hello.solunaevents@gmail.com</a><br>
+      Call or text us at <a href="tel:+14076307505" style="color: var(--twilight-blue); font-weight: bold;">(407) 630-7505</a>
+    </p>
   </section>
 </body>
 </html>
