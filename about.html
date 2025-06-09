@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soluna Events | About Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Karla&family=Poppins&family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --midnight-navy: #1F2A57;
+      --twilight-blue: #6183A6;
+      --lavender-mist: #B5B9D6;
+      --morning-blush: #F7DDD6;
+      --golden-glow: #FFF2A8;
+      --sunset-tangerine: #FAB88B;
+      --soft-background: #f5f1ed;
+    }
+
+    body {
+      background-color: var(--soft-background);
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: var(--midnight-navy);
+    }
+
+    .banner {
+      width: 100%;
+      background: linear-gradient(90deg, var(--lavender-mist), var(--golden-glow), var(--sunset-tangerine));
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .banner h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--midnight-navy);
+      margin: 0;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    nav a {
+      font-family: 'Karla', sans-serif;
+      text-decoration: none;
+      color: var(--midnight-navy);
+      background-color: var(--lavender-mist);
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--sunset-tangerine);
+      color: white;
+    }
+
+    .about-wrapper {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .about-section {
+      margin-bottom: 3rem;
+    }
+
+    .about-section h2 {
+      font-family: 'Satisfy', cursive;
+      font-size: 2rem;
+      color: var(--twilight-blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .about-section p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .portfolio-link {
+      display: inline-block;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: var(--twilight-blue);
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    .portfolio-link:hover {
+      color: var(--sunset-tangerine);
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <h1>About Us</h1>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Our Services</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="privacy.html">Privacy Policies</a>
+    <a href="terms.html">Terms and Conditions</a>
+  </nav>
+
+  <div class="about-wrapper">
+    <div class="about-section">
+      <h2>✨ About Soluna Events</h2>
+      <p>Soluna Events was born from a shared passion for intentional celebrations. We believe every event should feel like a reflection of the people at its center — warm, welcoming, and thoughtfully planned. Our name reflects our approach: blending the light of day with the magic of moonlight to create unforgettable experiences.</p>
+    </div>
+
+    <div class="about-section">
+      <h2>🌸 Meet Isa</h2>
+      <p>Hi, I’m Isabela — the creative heart behind Soluna! I specialize in event design and planning with a strong foundation in logistics, branding, and guest experience. I love crafting warm, visually cohesive environments that reflect your story. I'm a senior Event Management major at UCF, with experience coordinating events for Walt Disney World and Rosen College.</p>
+      <a class="portfolio-link" href="https://isairizarryli.github.io/Portfolio/" target="_blank">View My Portfolio & Resume →</a>
+    </div>
+
+    <div class="about-section">
+      <h2>🌼 Meet Alissa</h2>
+      <p>Hello! I’m Alissa — your go-to for behind-the-scenes coordination and smooth event execution. I come from a background in entertainment and guest service leadership, with hands-on experience managing logistics, operations, and large-scale event support at Universal and Walt Disney World. I thrive when I’m solving problems, supporting people, and turning chaos into calm.</p>
+    </div>
+  </div>
+</body>
+</html>
