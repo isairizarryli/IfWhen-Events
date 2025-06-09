@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soluna Events | Our Services</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Karla&family=Poppins&family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --midnight-navy: #1F2A57;
+      --twilight-blue: #6183A6;
+      --lavender-mist: #B5B9D6;
+      --morning-blush: #F7DDD6;
+      --golden-glow: #FFF2A8;
+      --sunset-tangerine: #FAB88B;
+      --soft-background: #f5f1ed;
+    }
+
+    body {
+      background-color: var(--soft-background);
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: var(--midnight-navy);
+    }
+
+    .banner {
+      width: 100%;
+      background: linear-gradient(90deg, var(--lavender-mist), var(--golden-glow), var(--sunset-tangerine));
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .banner h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--midnight-navy);
+      margin: 0;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    nav a {
+      font-family: 'Karla', sans-serif;
+      text-decoration: none;
+      color: var(--midnight-navy);
+      background-color: var(--lavender-mist);
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--sunset-tangerine);
+      color: white;
+    }
+
+    .services-section {
+      padding: 4rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .service-card {
+      background-color: var(--morning-blush);
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 300px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card h2 {
+      font-family: 'Satisfy', cursive;
+      font-size: 1.8rem;
+      color: var(--twilight-blue);
+    }
+
+    .service-card p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-top: 1rem;
+    }
+
+    .price-tag {
+      font-weight: bold;
+      margin-top: 1rem;
+      color: var(--sunset-tangerine);
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <h1>Our Services</h1>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Our Services</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="privacy.html">Privacy Policies</a>
+    <a href="terms.html">Terms and Conditions</a>
+  </nav>
+
+  <section class="services-section">
+    <div class="service-card">
+      <h2>🌞 Golden Start</h2>
+      <p>Day-of coordination with timeline review, vendor confirmation, and 8 hours of on-site support to keep things flowing smoothly.</p>
+      <p class="price-tag">Starting at $45/hr</p>
+    </div>
+
+    <div class="service-card">
+      <h2>🌗 From Dawn to Dusk</h2>
+      <p>Full-service planning from concept to cleanup. Vendor booking, budget guidance, creative consulting, and full event-day execution.</p>
+      <p class="price-tag">Custom package – starts at $45/hr</p>
+    </div>
+
+    <div class="service-card">
+      <h2>🌙 Starlit Details</h2>
+      <p>Decor setup, moodboard consultations, and day-of styling so your space reflects your vision perfectly — from centerpieces to signage.</p>
+      <p class="price-tag">$60/hr for styling & setup</p>
+    </div>
+  </section>
+</body>
+</html>
