@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Soluna Events | Home</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Karla&family=Poppins&family=Satisfy&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
   <style>
     :root {
       --midnight-navy: #1F2A57;
@@ -17,74 +23,170 @@
     }
 
     body {
-      margin: 0;
       background-color: var(--soft-background);
+      margin: 0;
       font-family: 'Poppins', sans-serif;
       color: var(--midnight-navy);
     }
 
+    .banner {
+      width: 100%;
+      background: linear-gradient(90deg, var(--lavender-mist), var(--golden-glow), var(--sunset-tangerine));
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .banner h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      color: var(--midnight-navy);
+      margin: 0;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
+    }
+
     nav {
-      background-color: var(--lavender-mist);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      font-family: 'Karla', sans-serif;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      text-align: center;
+      margin-top: 1rem;
     }
 
     nav a {
-      color: var(--midnight-navy);
+      margin: 0 1rem;
+      font-family: 'Karla', sans-serif;
       text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
+      color: var(--midnight-navy);
+      background-color: var(--lavender-mist);
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
     }
 
     nav a:hover {
-      color: var(--sunset-tangerine);
-    }
-
-    header {
-      text-align: center;
-      padding: 6rem 2rem 3rem;
-      background: linear-gradient(to right, var(--lavender-mist), var(--golden-glow), var(--sunset-tangerine));
-      font-family: 'Playfair Display', serif;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    header p {
-      font-size: 1.25rem;
-      max-width: 600px;
-      margin: 0 auto;
-      font-family: 'Karla', sans-serif;
-    }
-
-    .cta {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      background-color: var(--twilight-blue);
-      color: #fff;
-      border-radius: 30px;
-      text-decoration: none;
-      font-family: 'Satisfy', cursive;
-      font-size: 1.1rem;
-      transition: background 0.3s ease;
-    }
-
-    .cta:hover {
       background-color: var(--sunset-tangerine);
+      color: white;
+    }
+
+    .intro-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 10%;
+      background-color: var(--soft-background);
+    }
+
+    .intro-text {
+      flex: 1;
+      max-width: 50%;
+      opacity: 0;
+      animation: fadeInRight 1s ease-out forwards;
+      animation-delay: 0.3s;
+    }
+
+    .welcome-title {
+      font-family: 'Satisfy', cursive;
+      font-size: 3em;
       color: var(--midnight-navy);
+      background: linear-gradient(to top, var(--golden-glow) 50%, transparent 50%);
+      padding: 0 6px;
+      border-radius: 8px;
+    }
+
+    .intro-paragraph {
+      font-size: 1.2em;
+      color: var(--midnight-navy);
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .logo-container {
+      text-align: center;
+      margin: 2rem 0 0;
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .logo-container img {
+      width: 140px;
+      height: auto;
+      opacity: 0.95;
+    }
+
+    .intro-image {
+      flex: 1;
+      max-width: 40%;
+      text-align: right;
+      opacity: 0;
+      animation: fadeInLeft 1s ease-out forwards;
+      animation-delay: 1s;
+    }
+
+    .home-photo {
+      background-color: var(--morning-blush);
+      border-radius: 150px 150px 0 0;
+      overflow: hidden;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border: 3px solid var(--lavender-mist);
+    }
+
+    .home-photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .home-photo img:hover {
+      transform: scale(1.03);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes fadeInRight {
+      0% { opacity: 0; transform: translateX(-30px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInLeft {
+      0% { opacity: 0; transform: translateX(30px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media screen and (max-width: 768px) {
+      .intro-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .intro-text, .intro-image {
+        max-width: 100%;
+      }
+
+      .intro-image {
+        margin-top: 2rem;
+        text-align: center;
+      }
+
+      .banner h1 {
+        font-size: 2.5rem;
+        padding: 0 2rem;
+        line-height: 1.2;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Soluna Events</h1>
+  </div>
+
+  <!-- Navigation Bar -->
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Our Services</a>
@@ -94,10 +196,22 @@
     <a href="terms.html">Terms and Conditions</a>
   </nav>
 
-  <header>
-    <h1>Soluna Events</h1>
-    <p>Where celebrations rise with the sun and shine through the stars. Let’s plan a day full of intention, beauty, and joy — together.</p>
-    <a href="services.html" class="cta">Explore Our Services</a>
-  </header>
+  <!-- Welcome Section -->
+  <section class="intro-section">
+    <div class="intro-text">
+      <h2 class="welcome-title">Welcome to Soluna Events</h2>
+      <p class="intro-paragraph">
+        We craft celebrations that glow from sunrise to moonlight — thoughtful, joyful events rooted in intention, culture, and creativity. Let’s bring your vision to life with care and flair.
+      </p>
+      <div class="logo-container">
+        <img src="images/soluna-logo.png" alt="Soluna Events Logo">
+      </div>
+    </div>
+    <div class="intro-image">
+      <div class="home-photo">
+        <img src="images/soluna-home-photo.jpg" alt="Event decor or Isa/Alissa photo">
+      </div>
+    </div>
+  </section>
 </body>
 </html>
