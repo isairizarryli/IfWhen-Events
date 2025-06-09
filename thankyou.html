@@ -53,5 +53,17 @@
     <h1>Thank You for Reaching Out!</h1>
     <p>We’ll review your request and be in contact soon. You’ll be redirected to the homepage shortly.</p>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      confetti({
+        particleCount: 100,
+        spread: 80,
+        origin: { y: 0.2 },
+        shapes: ['star'],
+        colors: ['#FFF2A8', '#FAB88B', '#B5B9D6', '#1F2A57']
+      });
+    });
+  </script>
 </body>
 </html>
