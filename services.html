@@ -63,6 +63,24 @@
       color: white;
     }
 
+    .intro-services {
+      text-align: center;
+      max-width: 700px;
+      margin: 2rem auto;
+    }
+
+    .intro-services h2 {
+      font-family: 'Playfair Display';
+      font-size: 2rem;
+      color: var(--midnight-navy);
+    }
+
+    .intro-services p {
+      font-size: 1rem;
+      color: var(--midnight-navy);
+      margin-top: 1rem;
+    }
+
     .services-section {
       padding: 4rem 2rem;
       display: flex;
@@ -102,6 +120,35 @@
       margin-top: 1rem;
       color: var(--sunset-tangerine);
     }
+
+    .cta {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .cta a {
+      background-color: var(--twilight-blue);
+      color: white;
+      padding: 0.8rem 1.6rem;
+      border-radius: 30px;
+      font-family: 'Satisfy', cursive;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: var(--sunset-tangerine);
+      color: var(--midnight-navy);
+    }
+
+    .note-text {
+      text-align: center;
+      font-size: 0.95rem;
+      color: var(--midnight-navy);
+      max-width: 600px;
+      margin: 2rem auto;
+    }
   </style>
 </head>
 <body>
@@ -117,6 +164,11 @@
     <a href="privacy.html">Privacy Policies</a>
     <a href="terms.html">Terms and Conditions</a>
   </nav>
+
+  <section class="intro-services">
+    <h2>Thoughtful Planning, From Sunrise to Moonlight</h2>
+    <p>Whether you're looking for day-of coordination or full creative guidance, we offer support tailored to your celebration. Every package is flexible, transparent, and crafted with care.</p>
+  </section>
 
   <section class="services-section">
     <div class="service-card">
@@ -137,5 +189,13 @@
       <p class="price-tag">$60/hr for styling & setup</p>
     </div>
   </section>
+
+  <p class="note-text">
+    Need something different? We’re happy to customize a service plan just for you. Add-ons like RSVP tracking, design consulting, and vendor research are available by request.
+  </p>
+
+  <div class="cta">
+    <a href="contact.html">Let's Start Planning ✨</a>
+  </div>
 </body>
 </html>
