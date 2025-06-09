@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soluna Events | About Us</title>
+  <title>Soluna Events | Our Services</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Karla&family=Poppins&family=Satisfy&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
@@ -62,63 +63,97 @@
       color: white;
     }
 
-    .about-wrapper {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 0 1rem;
+    .intro-services {
+      text-align: center;
+      max-width: 700px;
+      margin: 2rem auto;
     }
 
-    .about-section {
-      margin-bottom: 3rem;
-    }
-
-    .about-section h2 {
-      font-family: 'Satisfy', cursive;
+    .intro-services h2 {
+      font-family: 'Playfair Display';
       font-size: 2rem;
-      color: var(--twilight-blue);
-      margin-bottom: 0.5rem;
+      color: var(--midnight-navy);
     }
 
-    .about-section p {
+    .intro-services p {
       font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    .portfolio-link {
-      display: inline-block;
+      color: var(--midnight-navy);
       margin-top: 1rem;
-      font-weight: bold;
-      color: var(--twilight-blue);
-      text-decoration: underline;
-      transition: color 0.3s ease;
     }
 
-    .portfolio-link:hover {
+    .services-section {
+      padding: 4rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .service-card {
+      background-color: var(--morning-blush);
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 300px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card h2 {
+      font-family: 'Satisfy', cursive;
+      font-size: 1.8rem;
+      color: var(--twilight-blue);
+    }
+
+    .service-card p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-top: 1rem;
+    }
+
+    .price-tag {
+      font-weight: bold;
+      margin-top: 1rem;
       color: var(--sunset-tangerine);
     }
-      .portfolio-button {
-      display: inline-block;
-      margin-top: 1rem;
-      background-color: var(--twilight-blue);
-      color: white;
-      padding: 0.6rem 1.4rem;
-      border-radius: 30px;
-      font-family: 'Karla', sans-serif;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: background-color 0.3s ease, color 0.3s ease;
+
+    .cta {
+      text-align: center;
+      margin-top: 3rem;
     }
 
-    .portfolio-button:hover {
+    .cta a {
+      background-color: var(--twilight-blue);
+      color: white;
+      padding: 0.8rem 1.6rem;
+      border-radius: 30px;
+      font-family: 'Satisfy', cursive;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
       background-color: var(--sunset-tangerine);
       color: var(--midnight-navy);
     }
 
-</style>
+    .note-text {
+      text-align: center;
+      font-size: 0.95rem;
+      color: var(--midnight-navy);
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+  </style>
 </head>
 <body>
   <div class="banner">
-    <h1>About Us</h1>
+    <h1>Our Services</h1>
   </div>
 
   <nav>
@@ -130,22 +165,37 @@
     <a href="terms.html">Terms and Conditions</a>
   </nav>
 
-  <div class="about-wrapper">
-    <div class="about-section">
-      <h2>✨ About Soluna Events</h2>
-      <p>Soluna Events was born from a shared passion for intentional celebrations. We believe every event should feel like a reflection of the people at its center — warm, welcoming, and thoughtfully planned. Our name reflects our approach: blending the light of day with the magic of moonlight to create unforgettable experiences.</p>
+  <section class="intro-services">
+    <h2>Thoughtful Planning, From Sunrise to Moonlight</h2>
+    <p>Whether you're looking for day-of coordination or full creative guidance, we offer support tailored to your celebration. Every package is flexible, transparent, and crafted with care.</p>
+  </section>
+
+  <section class="services-section">
+    <div class="service-card">
+      <h2>🌞 Golden Start</h2>
+      <p>Day-of coordination with timeline review, vendor confirmation, and 8 hours of on-site support to keep things flowing smoothly.</p>
+      <p class="price-tag">Starting at $45/hr</p>
     </div>
 
-    <div class="about-section">
-      <h2>🌸 Meet Isa</h2>
-      <p>Hi, I’m Isabela — the creative heart behind Soluna! I specialize in event design and planning with a strong foundation in logistics, branding, and guest experience. I love crafting warm, visually cohesive environments that reflect your story. I'm a senior Event Management major at UCF, with experience coordinating events for Walt Disney World and Rosen College.</p>
-      <a class="portfolio-button" href="https://isairizarryli.github.io/Portfolio/" target="_blank">🌐 View My Portfolio & Resume</a>
+    <div class="service-card">
+      <h2>🌗 From Dawn to Dusk</h2>
+      <p>Full-service planning from concept to cleanup. Vendor booking, budget guidance, creative consulting, and full event-day execution.</p>
+      <p class="price-tag">Custom package – starts at $45/hr</p>
     </div>
 
-    <div class="about-section">
-      <h2>🌼 Meet Alissa</h2>
-      <p>Hello! I’m Alissa — your go-to for behind-the-scenes coordination and smooth event execution. I come from a background in entertainment and guest service leadership, with hands-on experience managing logistics, operations, and large-scale event support at Universal and Walt Disney World. I thrive when I’m solving problems, supporting people, and turning chaos into calm.</p>
+    <div class="service-card">
+      <h2>🌙 Starlit Details</h2>
+      <p>Decor setup, moodboard consultations, and day-of styling so your space reflects your vision perfectly — from centerpieces to signage.</p>
+      <p class="price-tag">$60/hr for styling & setup</p>
     </div>
+  </section>
+
+  <p class="note-text">
+    Need something different? We’re happy to customize a service plan just for you. Add-ons like RSVP tracking, design consulting, and vendor research are available by request.
+  </p>
+
+  <div class="cta">
+    <a href="contact.html">Let's Start Planning ✨</a>
   </div>
 </body>
 </html>
