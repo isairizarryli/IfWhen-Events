@@ -45,12 +45,14 @@
     }
 
     nav {
-      text-align: center;
-      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
     }
 
     nav a {
-      margin: 0 1rem;
       font-family: 'Karla', sans-serif;
       text-decoration: none;
       color: var(--midnight-navy);
@@ -58,6 +60,7 @@
       padding: 0.5rem 1rem;
       border-radius: 25px;
       transition: background-color 0.3s ease;
+      white-space: nowrap;
     }
 
     nav a:hover {
@@ -176,6 +179,15 @@
         font-size: 2.5rem;
         padding: 0 2rem;
         line-height: 1.2;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        margin: 0.5rem 0;
       }
     }
   </style>
