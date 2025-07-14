@@ -1,228 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soluna Events | Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>If & When Events</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Karla&family=Poppins&family=Satisfy&display=swap" rel="stylesheet">
-
-  <!-- External Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --midnight-navy: #1F2A57;
-      --twilight-blue: #6183A6;
-      --lavender-mist: #B5B9D6;
-      --morning-blush: #F7DDD6;
-      --golden-glow: #FFF2A8;
-      --sunset-tangerine: #FAB88B;
-      --soft-background: #f5f1ed;
+      --color-forest-green: #2D4C3A;
+      --color-silver: #D9D9D9;
+      --color-gold: #BFA46F;
+      --color-charcoal: #4A4A4A;
+      --color-misty-cream: #EBEFE4;
+      --color-olive: #4A5A48;
+      --color-muted-rose: #C8A8A0;
+      --color-dusty-blush: #B7928C;
+      --color-soft-taupe: #D2C6B2;
+
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Poppins', sans-serif;
+      --font-accent: 'Allura', cursive;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      background-color: var(--soft-background);
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      color: var(--midnight-navy);
-    }
-
-    .banner {
-      width: 100%;
-      background: linear-gradient(90deg, var(--lavender-mist), var(--golden-glow), var(--sunset-tangerine));
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    .banner h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 4rem;
-      color: var(--midnight-navy);
-      margin: 0;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
-    }
-
-    nav {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    nav a {
-      margin: 0.5rem 0.5rem;
-      font-family: 'Karla', sans-serif;
-      text-decoration: none;
-      color: var(--midnight-navy);
-      background-color: var(--lavender-mist);
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-    }
-
-    nav a:hover {
-      background-color: var(--sunset-tangerine);
-      color: white;
-    }
-
-    .intro-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 4rem 10%;
-      background-color: var(--soft-background);
-    }
-
-    .intro-text {
-      flex: 1;
-      max-width: 50%;
-      opacity: 0;
-      animation: fadeInRight 1s ease-out forwards;
-      animation-delay: 0.3s;
-    }
-
-    .welcome-title {
-      font-family: 'Satisfy', cursive;
-      font-size: 3em;
-      color: var(--twilight-blue);
-      background: linear-gradient(to top, var(--morning-blush) 50%, transparent 50%);
-      padding: 0 6px;
-      border-radius: 8px;
-    }
-
-    .intro-paragraph {
-      font-size: 1.2em;
-      color: var(--midnight-navy);
-      margin-top: 20px;
+      font-family: var(--font-body);
+      color: var(--color-charcoal);
+      background-color: var(--color-misty-cream);
       line-height: 1.6;
     }
 
-    .logo-container {
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background-color: var(--color-forest-green);
+      color: var(--color-misty-cream);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a:hover {
+      color: var(--color-gold);
+    }
+
+    .hero {
+      padding: 4rem 2rem;
       text-align: center;
-      margin: 2rem 0 0;
-      animation: fadeIn 1.5s ease-out forwards;
+      background-image: url('hero-image.jpg');
+      background-size: cover;
+      background-position: center;
+      color: var(--color-misty-cream);
     }
 
-    .logo-container img {
-      width: 140px;
-      height: auto;
-      opacity: 0.95;
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
 
-    .intro-image {
-      flex: 1;
-      max-width: 40%;
-      text-align: right;
-      opacity: 0;
-      animation: fadeInLeft 1s ease-out forwards;
-      animation-delay: 1s;
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
     }
 
-    .home-photo {
-      background-color: var(--morning-blush);
-      border-radius: 150px 150px 0 0;
-      overflow: hidden;
-      width: 100%;
-      max-width: 300px;
+    .btn-primary {
+      background-color: var(--color-gold);
+      color: var(--color-forest-green);
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-muted-rose);
+    }
+
+    section {
+      padding: 3rem 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
       margin: 0 auto;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      border: 3px solid var(--lavender-mist);
     }
 
-    .home-photo img {
-      display: block;
-      width: 100%;
-      height: auto;
+    .about h2,
+    .services h2 {
+      font-family: var(--font-heading);
+      color: var(--color-forest-green);
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
 
-    .home-photo img:hover {
-      transform: scale(1.03);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    .about p,
+    .services p {
+      margin-bottom: 1.5rem;
     }
 
-    @keyframes fadeInRight {
-      0% { opacity: 0; transform: translateX(-30px); }
-      100% { opacity: 1; transform: translateX(0); }
+    .services .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
     }
 
-    @keyframes fadeInLeft {
-      0% { opacity: 0; transform: translateX(30px); }
-      100% { opacity: 1; transform: translateX(0); }
+    .card {
+      background-color: var(--color-misty-cream);
+      border: 1px solid var(--color-silver);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    .card h3 {
+      font-family: var(--font-heading);
+      color: var(--color-olive);
+      margin-bottom: 0.75rem;
     }
 
-    @media screen and (max-width: 768px) {
-      nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+    .card p {
+      font-size: 0.95rem;
+      color: var(--color-charcoal);
+    }
 
-      nav a {
-        margin: 0.3rem;
-      }
+    footer {
+      background-color: var(--color-forest-green);
+      color: var(--color-misty-cream);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
 
-      .intro-section {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .intro-text, .intro-image {
-        max-width: 100%;
-      }
-
-      .intro-image {
-        margin-top: 2rem;
-        text-align: center;
-      }
-
-      .banner h1 {
-        font-size: 2.5rem;
-        padding: 0 2rem;
-        line-height: 1.2;
-      }
+    footer p {
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <!-- Banner -->
-  <div class="banner">
-    <h1>Soluna Events</h1>
-  </div>
+  <header>
+    <div class="logo">If & When <span style="font-family: var(--font-accent);">Events</span></div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Our Services</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="privacy.html">Privacy Policies</a>
-    <a href="terms.html">Terms and Conditions</a>
-  </nav>
+  <section class="hero">
+    <h1>Taking your “ifs” to “whens.”</h1>
+    <p>Your vision. Our planning. One unforgettable event.</p>
+    <button class="btn-primary">Get Started</button>
+  </section>
 
-  <!-- Welcome Section -->
-  <section class="intro-section">
-    <div class="intro-text">
-      <h2 class="welcome-title">Welcome to Soluna Events</h2>
-      <p class="intro-paragraph">
-        We craft celebrations that glow from sunrise to moonlight — thoughtful, joyful events rooted in intention, culture, and creativity. Let’s bring your vision to life with care and flair.
-      </p>
-      <div class="logo-container">
-        <img src="images/soluna-logo.png" alt="Soluna Events Logo">
+  <section id="about" class="about container">
+    <h2>About Us</h2>
+    <p>We are Alaina & Alissa, founders of If & When Events. From dreaming in “ifs” to celebrating in “whens,” we blend creativity, precision, and heart to make every moment unforgettable.</p>
+  </section>
+
+  <section id="services" class="services container">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Full Event Planning</h3>
+        <p>Comprehensive planning from concept to execution. Perfect for weddings, corporate events, and celebrations of every kind.</p>
       </div>
-    </div>
-    <div class="intro-image">
-      <div class="home-photo">
-        <img src="images/soluna-home-photo.jpg" alt="Event decor or Isa/Alissa photo">
+      <div class="card">
+        <h3>Day-of Coordination</h3>
+        <p>Seamless management on your big day, so you can relax and enjoy. We handle every detail, timeline, and vendor.</p>
+      </div>
+      <div class="card">
+        <h3>Design & Styling</h3>
+        <p>Custom décor, floral concepts, and visual storytelling to bring your unique vision to life.</p>
       </div>
     </div>
   </section>
+
+  <section id="portfolio" class="container">
+    <h2>Portfolio</h2>
+    <!-- Add image gallery or case studies here -->
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p>Ready to plan your next event? <a href="mailto:hello@ifwhenevents.com">hello@ifwhenevents.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 If & When Events. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
