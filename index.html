@@ -41,22 +41,24 @@
     }
 
     header {
-      background: var(--color-dusty-blush);
-      padding: 3rem 1rem;
+      background: linear-gradient(to right, var(--color-muted-rose), var(--color-soft-taupe));
+      padding: 4rem 1rem 2rem;
       text-align: center;
     }
 
     .logo {
       font-family: var(--font-heading);
-      font-size: 3rem;
+      font-size: 3.5rem;
       font-weight: 700;
       color: var(--color-forest-green);
     }
 
     .logo .accent {
       font-family: var(--font-accent);
-      font-size: 3rem;
+      font-size: 3.5rem;
       color: var(--color-gold);
+      display: inline-block;
+      margin-left: 0.25rem;
     }
 
     nav {
@@ -75,6 +77,7 @@
     nav a {
       font-weight: 500;
       color: var(--color-silver);
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
@@ -82,9 +85,9 @@
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 2rem;
+      padding: 3rem 2rem;
       text-align: center;
     }
 
@@ -117,7 +120,7 @@
       border-radius: 4px;
       cursor: pointer;
       font-weight: 600;
-      transition: background-color .3s, color .3s;
+      transition: all 0.3s ease;
     }
 
     .btn-primary:hover {
@@ -157,6 +160,7 @@
       color: var(--color-silver);
       text-align: center;
       padding: 1.5rem;
+      margin-top: 4rem;
     }
   </style>
 </head>
@@ -179,7 +183,7 @@
     <button class="btn-primary">Get Started</button>
 
     <h2>What We Do</h2>
-    <p>Full planning, day-of coordination, and design & styling for weddings, corporate events, and celebrations of all kinds.</p>
+    <p>We offer full-service planning, day-of coordination, and bespoke design for weddings, corporate gatherings, and meaningful celebrations of all kinds.</p>
 
     <ul class="quick-links">
       <li><a href="services.html">View Services</a></li>
