@@ -41,14 +41,15 @@
     }
 
     header {
-      background: linear-gradient(90deg, var(--color-dusty-blush), var(--color-soft-taupe), var(--color-muted-rose));
-      padding: 2rem;
+      background: var(--color-dusty-blush);
+      padding: 3rem 1rem;
       text-align: center;
     }
 
     .logo {
       font-family: var(--font-heading);
       font-size: 3rem;
+      font-weight: 700;
       color: var(--color-forest-green);
     }
 
@@ -84,6 +85,7 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 2rem;
+      text-align: center;
     }
 
     h1, h2, h3 {
@@ -92,7 +94,7 @@
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.75rem;
       margin-bottom: 1rem;
     }
 
@@ -130,12 +132,14 @@
       flex-wrap: wrap;
       gap: 1rem;
       margin-top: 2rem;
+      justify-content: center;
     }
 
     ul.quick-links li {
       background-color: var(--color-soft-taupe);
-      padding: 1rem;
+      padding: 1rem 1.5rem;
       border-radius: 8px;
+      transition: background-color 0.3s ease;
     }
 
     ul.quick-links a {
