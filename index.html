@@ -1,8 +1,124 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>If & When Events - Home</title>
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Inline Styles -->
+  <style>
+    :root {
+      --color-forest-green: #2D4C3A;
+      --color-silver: #D9D9D9;
+      --color-gold: #BFA46F;
+      --color-charcoal: #4A4A4A;
+      --color-misty-cream: #EBEFE4;
+      --color-olive: #4A5A48;
+      --color-muted-rose: #C8A8A0;
+      --color-dusty-blush: #B7928C;
+      --color-soft-taupe: #D2C6B2;
+
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Poppins', sans-serif;
+      --font-accent: 'Allura', cursive;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--color-charcoal);
+      background-color: var(--color-misty-cream);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background-color: var(--color-forest-green);
+      color: var(--color-misty-cream);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: var(--color-misty-cream);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--color-gold);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+      color: var(--color-forest-green);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .btn-primary {
+      background-color: var(--color-gold);
+      color: var(--color-forest-green);
+      padding: .75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color .3s;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-muted-rose);
+    }
+
+    footer {
+      background-color: var(--color-forest-green);
+      color: var(--color-misty-cream);
+      text-align: center;
+      padding: 1.5rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -17,6 +133,7 @@
       </ul>
     </nav>
   </header>
+
   <section class="container">
     <h1>Taking your “ifs” to “whens.”</h1>
     <p>Your vision. Our planning. One unforgettable event.</p>
@@ -29,6 +146,7 @@
       <li><a href="contact.html">Get In Touch</a></li>
     </ul>
   </section>
+
   <footer>
     <p>&copy; 2025 If & When Events</p>
   </footer>
