@@ -1,201 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soluna Events | Our Services</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Karla&family=Poppins&family=Satisfy&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>If & When Events - Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --midnight-navy: #1F2A57;
-      --twilight-blue: #6183A6;
-      --lavender-mist: #B5B9D6;
-      --morning-blush: #F7DDD6;
-      --golden-glow: #FFF2A8;
-      --sunset-tangerine: #FAB88B;
-      --soft-background: #f5f1ed;
-    }
+      --forest: #2D4C3A;
+      --silver: #D9D9D9;
+      --gold: #CBB26A;
+      --charcoal: #4A4A4A;
+      --cream: #EBEFE4;
+      --olive: #4A5A48;
+      --eucalyptus: #BCCDB3;
+      --taupe: #D2C6B2;
 
-    body {
-      background-color: var(--soft-background);
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      color: var(--midnight-navy);
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Poppins', sans-serif;
+      --font-accent: 'Allura', cursive;
     }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: var(--font-body); background: linear-gradient(to bottom, var(--cream), var(--taupe)); color: var(--charcoal); }
+    header { background-color: var(--forest); padding: 1.5rem; text-align: center; }
+    .logo { font-family: var(--font-heading); font-size: 2.5rem; color: var(--silver); }
+    nav { position: sticky; top:0; background: rgba(74,74,74,0.85); backdrop-filter: blur(8px); z-index: 100; padding: 0.75rem 0; }
+    nav ul { display:flex; justify-content:center; gap:2rem; list-style:none; }
+    nav a { color: var(--silver); text-decoration:none; font-weight:500; transition: color .3s; }
+    nav a:hover { color: var(--gold); }
 
-    .banner {
-      width: 100%;
-      background: linear-gradient(90deg, var(--lavender-mist), var(--golden-glow), var(--sunset-tangerine));
-      padding: 2rem 1rem;
-      text-align: center;
-    }
+    /* Hero */
+    .hero { background: linear-gradient(120deg, var(--taupe), var(--eucalyptus)); padding:5rem 2rem; text-align:center; }
+    .hero h1 { font-family: var(--font-heading); font-size:2.75rem; color: var(--forest); margin-bottom:0.5rem; }
+    .hero p { font-size:1.25rem; color: var(--forest); }
 
-    .banner h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      color: var(--midnight-navy);
-      margin: 0;
-    }
+    /* Packages */
+    .packages { display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; padding:4rem 2rem; }
+    .package-card { background: var(--cream); border-radius:8px; width:300px; padding:2rem; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition: transform .3s, background .3s; border: 2px solid transparent; }
+    .package-card.featured { border-color: var(--gold); transform: translateY(-5px); }
+    .package-card:hover { background: var(--silver); color: var(--charcoal); }
+    .package-card h3 { font-family: var(--font-heading); font-size:1.75rem; color: var(--forest); margin-bottom:0.5rem; }
+    .package-card p { font-style:italic; margin-bottom:1rem; }
+    .package-card ul { text-align:left; list-style:none; margin-bottom:1rem; padding-left:1rem; }
+    .package-card ul li::before { content:'✔'; color: var(--gold); margin-right:0.5rem; }
+    .package-card .btn { display:inline-block; background: var(--forest); color: var(--cream); padding:0.5rem 1rem; border:none; border-radius:6px; font-weight:600; cursor:pointer; transition: background .3s; text-decoration:none; }
+    .package-card .btn:hover { background: var(--silver); color: var(--forest); }
 
-    nav {
-      text-align: center;
-      margin-top: 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-    }
-
-    nav a {
-      font-family: 'Karla', sans-serif;
-      text-decoration: none;
-      color: var(--midnight-navy);
-      background-color: var(--lavender-mist);
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      transition: background-color 0.3s ease;
-    }
-
-    nav a:hover {
-      background-color: var(--sunset-tangerine);
-      color: white;
-    }
-
-    .intro-services {
-      text-align: center;
-      max-width: 700px;
-      margin: 2rem auto;
-    }
-
-    .intro-services h2 {
-  font-family: 'Satisfy', cursive;
-  font-size: 2rem;
-  color: var(--twilight-blue);
-}
-
-    .intro-services p {
-      font-size: 1rem;
-      color: var(--midnight-navy);
-      margin-top: 1rem;
-    }
-
-    .services-section {
-      padding: 4rem 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    .service-card {
-      background-color: var(--morning-blush);
-      border-radius: 16px;
-      padding: 2rem;
-      max-width: 300px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .service-card h2 {
-      font-family: 'Satisfy', cursive;
-      font-size: 1.8rem;
-      color: var(--twilight-blue);
-    }
-
-    .service-card p {
-      font-size: 1rem;
-      line-height: 1.5;
-      margin-top: 1rem;
-    }
-
-    .price-tag {
-      font-weight: bold;
-      margin-top: 1rem;
-      color: var(--sunset-tangerine);
-    }
-
-    .cta {
-      text-align: center;
-      margin-top: 3rem;
-    }
-
-    .cta a {
-      background-color: var(--twilight-blue);
-      color: white;
-      padding: 0.8rem 1.6rem;
-      border-radius: 30px;
-      font-family: 'Satisfy', cursive;
-      font-size: 1.1rem;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    .cta a:hover {
-      background-color: var(--sunset-tangerine);
-      color: var(--midnight-navy);
-    }
-
-    .note-text {
-      text-align: center;
-      font-size: 0.95rem;
-      color: var(--midnight-navy);
-      max-width: 600px;
-      margin: 2rem auto;
-    }
+    /* Footer */
+    footer { background: var(--forest); color: var(--silver); text-align:center; padding:2rem; margin-top:2rem; }
   </style>
 </head>
 <body>
-  <div class="banner">
-    <h1>Our Services</h1>
-  </div>
-
+  <header>
+    <div class="logo">If & When Events</div>
+  </header>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Our Services</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="privacy.html">Privacy Policies</a>
-    <a href="terms.html">Terms and Conditions</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </nav>
 
-  <section class="intro-services">
-    <h2>Thoughtful Planning, From Sunrise to Moonlight</h2>
-    <p>Whether you're looking for day-of coordination or full creative guidance, we offer support tailored to your celebration. Every package is flexible, transparent, and crafted with care.</p>
+  <section class="hero">
+    <h1>Our Services</h1>
+    <p>From full planning to creative styling, we’ve got you covered.</p>
   </section>
 
-  <section class="services-section">
-    <div class="service-card">
-      <h2>🌞 Golden Start</h2>
-      <p>Day-of coordination with timeline review, vendor confirmation, and 8 hours of on-site support to keep things flowing smoothly.</p>
-      <p class="price-tag">Starting at $45/hr</p>
+  <section class="packages">
+    <div class="package-card">
+      <h3>If Package</h3>
+      <p>À la carte beginnings</p>
+      <ul>
+        <li>20 hours of planning</li>
+        <li>Vendor referrals</li>
+        <li>Day-of checklist</li>
+      </ul>
+      <a href="#" class="btn">Learn More →</a>
     </div>
-
-    <div class="service-card">
-      <h2>🌗 From Dawn to Dusk</h2>
-      <p>Full-service planning from concept to cleanup. Vendor booking, budget guidance, creative consulting, and full event-day execution.</p>
-      <p class="price-tag">Custom package – starts at $45/hr</p>
+    <div class="package-card featured">
+      <h3>When Package</h3>
+      <p>Full planning + design</p>
+      <ul>
+        <li>Everything in “If”</li>
+        <li>Design mockups & 3D layouts</li>
+        <li>Budget management</li>
+      </ul>
+      <a href="#" class="btn">Learn More →</a>
     </div>
-
-    <div class="service-card">
-      <h2>🌙 Starlit Details</h2>
-      <p>Decor setup, moodboard consultations, and day-of styling so your space reflects your vision perfectly — from centerpieces to signage.</p>
-      <p class="price-tag">$60/hr for styling & setup</p>
+    <div class="package-card">
+      <h3>Forever Package</h3>
+      <p>Ultimate VIP experience</p>
+      <ul>
+        <li>Everything in “When”</li>
+        <li>Custom day-of styling team</li>
+        <li>Post-event wrap & photo album</li>
+      </ul>
+      <a href="#" class="btn">Learn More →</a>
     </div>
   </section>
 
-  <p class="note-text">
-    Need something different? We’re happy to customize a service plan just for you. Add-ons like RSVP tracking, design consulting, and vendor research are available by request.
-  </p>
-
-  <div class="cta">
-    <a href="contact.html">Let's Start Planning ✨</a>
-  </div>
+  <footer>
+    <p>&copy; 2025 If & When Events</p>
+    <p>Email: ifwhen.events@gmail.com | Phone: 407-630-7505</p>
+  </footer>
 </body>
 </html>
