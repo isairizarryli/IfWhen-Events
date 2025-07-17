@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>If & When Events - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #2D4C3A;
+      --silver: #D9D9D9;
+      --gold: #CBB26A;
+      --charcoal: #4A4A4A;
+      --cream: #EBEFE4;
+      --olive: #4A5A48;
+      --eucalyptus: #BCCDB3;
+      --taupe: #D2C6B2;
+
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Poppins', sans-serif;
+      --font-accent: 'Allura', cursive;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: var(--font-body); background: var(--cream); color: var(--charcoal); }
+    header { background-color: var(--forest); padding: 1.5rem; text-align: center; }
+    .logo { font-family: var(--font-heading); font-size: 2.5rem; color: var(--silver); }
+    nav { position: sticky; top:0; background: rgba(74,74,74,0.85); backdrop-filter: blur(8px); z-index: 100; padding: 0.75rem 0; }
+    nav ul { display:flex; justify-content:center; gap:2rem; list-style:none; }
+    nav a { color: var(--silver); text-decoration:none; font-weight:500; transition: color .3s; }
+    nav a:hover { color: var(--gold); }
+
+    /* Hero */
+    .hero { background: var(--eucalyptus); padding:4rem 2rem; text-align:center; }
+    .hero h1 { font-family: var(--font-heading); font-size:2.75rem; color: var(--forest); margin-bottom:0.5rem; }
+    .hero p { font-size:1.2rem; color: var(--forest); }
+
+    /* Gallery */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap:1.5rem; padding:3rem 2rem; }
+    .item { position: relative; overflow: hidden; border-radius:8px; }
+    .item img { width:100%; height: auto; display:block; transition: transform .3s ease; }
+    .item:hover img { transform: scale(1.05); }
+    .overlay { position:absolute; bottom:0; left:0; width:100%; background: rgba(45,76,58,0.8); color:#fff; padding:1rem; transform: translateY(100%); transition: transform .3s ease; }
+    .item:hover .overlay { transform: translateY(0); }
+    .overlay h3 { margin-bottom:0.25rem; font-family: var(--font-heading); font-size:1.25rem; }
+    .overlay p { font-size:0.9rem; }
+
+    /* Footer */
+    footer { background: var(--forest); color: var(--silver); text-align:center; padding:2rem; margin-top:2rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">If & When Events</div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>Our Portfolio</h1>
+    <p>A collection of unforgettable moments we’ve crafted.</p>
+  </section>
+
+  <section class="grid">
+    <div class="item">
+      <img src="images/event1.jpg" alt="Wedding Design">
+      <div class="overlay">
+        <h3>Elegant Wedding</h3>
+        <p>Garden ceremony with rose accents</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/event2.jpg" alt="Corporate Launch">
+      <div class="overlay">
+        <h3>Corporate Gala</h3>
+        <p>Branded launch event with lighting design</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/event3.jpg" alt="Bridal Shower">
+      <div class="overlay">
+        <h3>Bridal Shower</h3>
+        <p>High tea in a floral conservatory</p>
+      </div>
+    </div>
+    <!-- duplicate structure for more items -->
+  </section>
+
+  <footer>
+    <p>&copy; 2025 If & When Events</p>
+    <p>Email: ifwhen.events@gmail.com | Phone: 407-630-7505</p>
+  </footer>
+</body>
+</html>
 
