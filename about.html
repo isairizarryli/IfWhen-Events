@@ -1,151 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soluna Events | About Us</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Karla&family=Poppins&family=Satisfy&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>If & When Events - About</title>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --midnight-navy: #1F2A57;
-      --twilight-blue: #6183A6;
-      --lavender-mist: #B5B9D6;
-      --morning-blush: #F7DDD6;
-      --golden-glow: #FFF2A8;
-      --sunset-tangerine: #FAB88B;
-      --soft-background: #f5f1ed;
-    }
+      --forest: #2D4C3A;
+      --silver: #D9D9D9;
+      --gold: #CBB26A;
+      --charcoal: #4A4A4A;
+      --cream: #EBEFE4;
+      --olive: #4A5A48;
+      --eucalyptus: #BCCDB3;
+      --taupe: #D2C6B2;
 
-    body {
-      background-color: var(--soft-background);
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      color: var(--midnight-navy);
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Poppins', sans-serif;
+      --font-accent: 'Allura', cursive;
     }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: var(--font-body); background: linear-gradient(to bottom, var(--cream), var(--taupe)); color: var(--charcoal); }
+    header { background-color: var(--forest); padding: 1.5rem; text-align: center; }
+    .logo { font-family: var(--font-heading); font-size: 2.5rem; color: var(--silver); }
+    nav { position: sticky; top:0; background: rgba(74,74,74,0.85); backdrop-filter: blur(8px); z-index: 100; padding: 0.75rem 0; }
+    nav ul { display:flex; justify-content:center; gap:2rem; list-style:none; }
+    nav a { color: var(--silver); text-decoration:none; font-weight:500; transition: color .3s; }
+    nav a:hover { color: var(--gold); }
 
-    .banner {
-      width: 100%;
-      background: linear-gradient(90deg, var(--lavender-mist), var(--golden-glow), var(--sunset-tangerine));
-      padding: 2rem 1rem;
-      text-align: center;
-    }
+    /* Hero */
+    .hero { background-color: var(--eucalyptus); padding:6rem 2rem; text-align:center; }
+    .hero-inner { display:inline-block; background: rgba(235,239,228,0.9); padding:3rem; border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,0.1); }
+    .hero h1 { font-family: var(--font-heading); font-size:2.5rem; color: var(--forest); margin-bottom:0.5rem; }
+    .hero p { font-size:1.25rem; color: var(--forest); margin-bottom:1rem; }
+    .pull-quote { font-family: var(--font-accent); font-size:1.5rem; color: var(--olive); margin-top:1rem; }
 
-    .banner h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      color: var(--midnight-navy);
-      margin: 0;
-    }
+    /* Two-column profiles */
+    .profiles { display:flex; flex-wrap:wrap; gap:4rem; padding:4rem 2rem; justify-content:center; }
+    .profile { flex:1 1 300px; display:flex; align-items:center; gap:2rem; }
+    .profile:nth-of-type(even) { background-color: var(--taupe); padding:2rem; border-radius:8px; }
+    .profile img { width:200px; height:200px; object-fit:cover; border-radius:50%; border:4px solid var(--silver); }
+    .profile-content h3 { font-family: var(--font-heading); font-size:1.75rem; color: var(--forest); }
+    .profile-content p { margin-top:0.5rem; line-height:1.6; }
 
-    nav {
-      text-align: center;
-      margin-top: 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-    }
+    /* Timeline */
+    .timeline { position: relative; margin:4rem 2rem; padding-left:2rem; }
+    .timeline::before { content: ''; position:absolute; left:20px; top:0; bottom:0; width:4px; background: var(--silver); }
+    .event { position: relative; margin-bottom:3rem; padding-left:2rem; }
+    .event::before { content:''; position:absolute; left:-8px; top:0; width:20px; height:20px; background: var(--silver); border-radius:50%; }
+    .event h4 { font-family: var(--font-heading); font-size:1.5rem; color: var(--forest); display:inline-block; margin-right:0.5rem; }
+    .event p { margin-top:0.25rem; color: var(--charcoal); }
 
-    nav a {
-      font-family: 'Karla', sans-serif;
-      text-decoration: none;
-      color: var(--midnight-navy);
-      background-color: var(--lavender-mist);
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      transition: background-color 0.3s ease;
-    }
+    /* Values grid */
+    .values { display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:2rem; padding:4rem 2rem; }
+    .value-card { background: var(--olive); color: var(--cream); padding:2rem; border-radius:8px; text-align:center; box-shadow:0 4px 16px rgba(0,0,0,0.08); transition: transform .3s, background .3s; }
+    .value-card:hover { transform: translateY(-5px); background: var(--silver); color: var(--forest); }
+    .value-card .icon { font-size:2rem; margin-bottom:0.5rem; color: var(--gold); }
+    .value-card h4 { font-family: var(--font-heading); margin-bottom:0.5rem; }
 
-    nav a:hover {
-      background-color: var(--sunset-tangerine);
-      color: white;
-    }
+    /* CTA strip */
+    .cta-strip { background: var(--gold); text-align:center; padding:2rem 1rem; }
+    .cta-strip h2 { font-family: var(--font-heading); font-size:2rem; color: var(--forest); margin-bottom:1rem; }
+    .cta-strip .btn { background: var(--forest); color: var(--cream); }
+    .cta-strip .btn:hover { background: var(--silver); color: var(--forest); }
 
-    .about-wrapper {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-
-    .about-section {
-      margin-bottom: 3rem;
-    }
-
-    .about-section h2 {
-      font-family: 'Satisfy', cursive;
-      font-size: 2rem;
-      color: var(--twilight-blue);
-      margin-bottom: 0.5rem;
-    }
-
-    .about-section p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    .portfolio-link {
-      display: inline-block;
-      margin-top: 1rem;
-      font-weight: bold;
-      color: var(--twilight-blue);
-      text-decoration: underline;
-      transition: color 0.3s ease;
-    }
-
-    .portfolio-link:hover {
-      color: var(--sunset-tangerine);
-    }
-      .portfolio-button {
-      display: inline-block;
-      margin-top: 1rem;
-      background-color: var(--twilight-blue);
-      color: white;
-      padding: 0.6rem 1.4rem;
-      border-radius: 30px;
-      font-family: 'Karla', sans-serif;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .portfolio-button:hover {
-      background-color: var(--sunset-tangerine);
-      color: var(--midnight-navy);
-    }
-
-</style>
+    footer { background: var(--forest); color: var(--silver); text-align:center; padding:2rem; margin-top:2rem; }
+  </style>
 </head>
 <body>
-  <div class="banner">
-    <h1>About Us</h1>
-  </div>
-
+  <header>
+    <div class="logo">If & When Events</div>
+  </header>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Our Services</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="privacy.html">Privacy Policies</a>
-    <a href="terms.html">Terms and Conditions</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </nav>
 
-  <div class="about-wrapper">
-    <div class="about-section">
-      <h2>✨ About Soluna Events</h2>
-      <p>Soluna Events was born from a shared passion for intentional celebrations. We believe every event should feel like a reflection of the people at its center — warm, welcoming, and thoughtfully planned. Our name reflects our approach: blending the light of day with the magic of moonlight to create unforgettable experiences.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Our Story</h1>
+      <p>We’re Alaina &amp; Alissa, two A’s balancing creativity and precision.</p>
+      <div class="pull-quote">“From if/when’s to forever.”</div>
     </div>
+  </section>
 
-    <div class="about-section">
-      <h2>🌸 Meet Isa</h2>
-      <p>Hi, I’m Isabela — the creative heart behind Soluna! I specialize in event design and planning with a strong foundation in logistics, branding, and guest experience. I love crafting warm, visually cohesive environments that reflect your story. I'm a senior Event Management major at UCF, with experience coordinating events for Walt Disney World and Rosen College.</p>
-      <a class="portfolio-button" href="https://isairizarryli.github.io/Portfolio/" target="_blank">💻 View My Portfolio</a>
+  <!-- Profiles -->
+  <div class="profiles">
+    <div class="profile">
+      <img src="images/alaina.jpg" alt="Alaina portrait">
+      <div class="profile-content">
+        <h3>The Creative Designer</h3>
+        <p>Alaina brings bold design and artistic vision to every event. With a background in fine arts and a passion for color, she transforms spaces into unforgettable experiences.</p>
+      </div>
     </div>
-
-    <div class="about-section">
-      <h2>🌼 Meet Alissa</h2>
-      <p>Hello! I’m Alissa — your go-to for behind-the-scenes coordination and smooth event execution. I come from a background in entertainment and guest service leadership, with hands-on experience managing logistics, operations, and large-scale event support at Universal and Walt Disney World. I thrive when I’m solving problems, supporting people, and turning chaos into calm.</p>
+    <div class="profile">
+      <div class="profile-content">
+        <h3>The Analytical Maestro</h3>
+        <p>Alissa orchestrates logistics and timelines with musical precision. A former professional musician turned planner, she ensures every detail harmonizes perfectly.</p>
+      </div>
+      <img src="images/alissa.jpg" alt="Alissa portrait">
     </div>
   </div>
+
+  <!-- Timeline -->
+  <div class="timeline">
+    <div class="event">
+      <h4>First Date</h4><p>Our journey began with a spark of possibility.</p>
+    </div>
+    <div class="event">
+      <h4>Wedding Day</h4><p>We said “I do” and celebrated love and creativity.</p>
+    </div>
+    <div class="event">
+      <h4>If &amp; When Events Founded</h4><p>Turning “ifs” into “whens” for our clients’ dreams.</p>
+    </div>
+  </div>
+
+  <!-- Values -->
+  <div class="values">
+    <div class="value-card">
+      <div class="icon">✦</div>
+      <h4>Balance</h4>
+      <p>Harmony between creativity and structure.</p>
+    </div>
+    <div class="value-card">
+      <div class="icon">✿</div>
+      <h4>Creativity</h4>
+      <p>Original design that reflects your story.</p>
+    </div>
+    <div class="value-card">
+      <div class="icon">⚙</div>
+      <h4>Precision</h4>
+      <p>Flawless execution down to every detail.</p>
+    </div>
+    <div class="value-card">
+      <div class="icon">♥</div>
+      <h4>Joy</h4>
+      <p>Moments crafted to inspire and delight.</p>
+    </div>
+  </div>
+
+  <!-- CTA Strip -->
+  <div class="cta-strip">
+    <h2>Ready to plan your moment?</h2>
+    <a href="contact.html" class="btn">Let’s Chat</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 If &amp; When Events</p>
+    <p>Email: ifwhen.events@gmail.com | Phone: 407-630-7505</p>
+  </footer>
 </body>
 </html>
