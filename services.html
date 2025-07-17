@@ -37,8 +37,7 @@
     /* Packages */
     .packages { display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; padding:4rem 2rem; }
     .package-card { background: var(--cream); border-radius:8px; width:300px; padding:2rem; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition: transform .3s, background .3s; border: 2px solid transparent; }
-    .package-card.featured { border-color: var(--gold); transform: translateY(-5px); }
-    .package-card:hover { background: var(--silver); color: var(--charcoal); }
+    .package-card:hover { background: var(--silver); color: var(--charcoal); transform: translateY(-5px); }
     .package-card h3 { font-family: var(--font-heading); font-size:1.75rem; color: var(--forest); margin-bottom:0.5rem; }
     .package-card p { font-style:italic; margin-bottom:1rem; }
     .package-card ul { text-align:left; list-style:none; margin-bottom:1rem; padding-left:1rem; }
@@ -80,7 +79,7 @@
       </ul>
       <a href="#" class="btn">Learn More →</a>
     </div>
-    <div class="package-card featured">
+    <div class="package-card">
       <h3>When Package</h3>
       <p>Full planning + design</p>
       <ul>
