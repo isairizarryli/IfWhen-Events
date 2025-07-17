@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>If & When Events - About</title>
+  <title>If & When Events – About</title>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -20,48 +20,56 @@
       --font-body: 'Poppins', sans-serif;
       --font-accent: 'Allura', cursive;
     }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:var(--font-body); background:var(--cream); color:var(--charcoal); }
-    header { background-color:var(--forest); padding:1.5rem; text-align:center; }
-    .logo { font-family:var(--font-heading); font-size:2.5rem; color:var(--silver); }
-    nav { background:rgba(74,74,74,0.9); padding:0.75rem 0; position:sticky; top:0; z-index:100; }
-    nav ul { display:flex; justify-content:center; gap:2rem; list-style:none; }
-    nav a { color:var(--silver); text-decoration:none; font-weight:500; transition:color 0.3s; }
-    nav a:hover { color:var(--gold); }
 
-    main { padding:2rem; max-width:800px; margin:0 auto; }
-    .cards { display:flex; flex-direction:column; gap:2.5rem; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--font-body); background: var(--cream); color: var(--charcoal); }
+    header { background-color: var(--forest); padding: 1rem; text-align: center; }
+    .logo { font-family: var(--font-heading); font-size: 2.5rem; color: var(--silver); }
 
+    nav { background: var(--charcoal); padding: 0.75rem 0; position: sticky; top: 0; z-index: 10; }
+    nav ul { display: flex; justify-content: center; gap: 2rem; list-style: none; }
+    nav a { color: var(--silver); text-decoration: none; font-weight: 500; transition: color 0.3s; }
+    nav a:hover { color: var(--gold); }
+
+    main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    h1.page-title { font-family: var(--font-heading); font-size: 2.5rem; color: var(--forest); text-align: center; margin-bottom: 2rem; }
+
+    .cards { display: flex; flex-direction: column; gap: 2rem; }
     .card {
-      background-color:var(--taupe);
-      border-radius:10px;
-      padding:2rem;
-      text-align:center;
-      box-shadow:0 4px 8px rgba(0,0,0,0.1);
+      background-color: var(--taupe);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
+    .card:nth-child(even) { background-color: var(--olive); }
+
     .card img {
-      width:160px;
-      height:160px;
-      object-fit:cover;
-      border-radius:50%;
-      border:4px solid var(--silver);
-      margin-bottom:1rem;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--silver);
+      margin-bottom: 1rem;
     }
     .card h2 {
-      font-family:var(--font-heading);
-      font-size:1.75rem;
-      color:var(--forest);
-      margin-bottom:0.75rem;
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      color: var(--forest);
+      margin-bottom: 0.75rem;
     }
     .card p {
-      font-size:1rem;
-      line-height:1.6;
-      color:var(--charcoal);
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--charcoal);
     }
 
-    /* Responsive stacking even on wide view */
+    /* Always stacked, even on wide screens */
     @media(min-width: 1200px) {
-      .cards { flex-direction:column; }
+      .cards { flex-direction: column; }
     }
   </style>
 </head>
@@ -79,15 +87,13 @@
     </ul>
   </nav>
   <main>
-    <h1 style="font-family:var(--font-heading); font-size:2.5rem; color:var(--forest); text-align:center; margin-bottom:2rem;">About Us</h1>
+    <h1 class="page-title">About Us</h1>
     <div class="cards">
-      <!-- Alaina Card -->
       <div class="card">
         <img src="images/alaina.jpg" alt="Alaina Portrait">
         <h2>The Creative Designer</h2>
         <p>Alaina brings bold design and artistic vision to every event. With a background in fine arts and a passion for color, she transforms spaces into unforgettable experiences.</p>
       </div>
-      <!-- Alissa Card -->
       <div class="card">
         <img src="images/alissa.jpg" alt="Alissa Portrait">
         <h2>The Analytical Maestro</h2>
