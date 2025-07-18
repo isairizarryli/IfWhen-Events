@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>If & When Events - About</title>
-  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --forest: #2D4C3A;
@@ -84,6 +84,12 @@
       color: var(--charcoal);
     }
 
+    .profiles { display: flex; justify-content: space-around; flex-wrap: wrap; padding: 4rem 2rem; gap: 2rem; }
+    .profile { background: var(--cream); padding: 2rem; border-radius: 8px; width: 300px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .profile img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid var(--eucalyptus); margin-bottom: 1rem; }
+    .profile h3 { font-family: var(--font-heading); font-size: 1.5rem; color: var(--forest); margin-bottom: 0.5rem; }
+    .profile p { font-size: 0.95rem; }
+
     .values { display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:2rem; padding:4rem 2rem; }
     .value-card { background: var(--olive); color: var(--cream); padding:2rem; border-radius:8px; text-align:center; box-shadow:0 4px 16px rgba(0,0,0,0.08); transition: transform .3s, background .3s; }
     .value-card:hover { transform: translateY(-5px); background: var(--silver); color: var(--forest); }
@@ -142,6 +148,19 @@
       <div class="fact-item"><p><strong>5+ Years Together</strong></p></div>
       <div class="fact-item"><p><strong>75+ Events Planned</strong></p></div>
       <div class="fact-item"><p><strong>100% Client Smiles</strong></p></div>
+    </div>
+  </div>
+
+  <div class="profiles">
+    <div class="profile">
+      <img src="images/alaina.jpg" alt="Alaina">
+      <h3>Alaina</h3>
+      <p>Calm, precise, and detail-oriented. Loves planning timelines and checking things off the list.</p>
+    </div>
+    <div class="profile">
+      <img src="images/alissa.jpg" alt="Alissa">
+      <h3>Alissa</h3>
+      <p>Creative, empathetic, and expressive. Loves bringing designs to life and connecting with clients.</p>
     </div>
   </div>
 
