@@ -45,8 +45,22 @@
     .story-facts .timeline { padding-left:2rem; }
     .story-facts .timeline::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background: var(--eucalyptus); }
     .story-facts .event { position: relative; margin-bottom:3rem; padding-left:2rem; }
-    .story-facts .event::before { content:''; position:absolute; left:-8px; top:0; width:20px; height:20px; background: var(--eucalyptus); border-radius:50%; }
-    .story-facts .event h4 { font-family: var(--font-heading); font-size:1.5rem; color: var(--forest); display:inline-block; margin-right:0.5rem; }
+    .story-facts .event::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 0.4rem;
+      width: 12px;
+      height: 12px;
+      background: var(--eucalyptus);
+      border-radius: 50%;
+    }
+    .story-facts .event h4 {
+      font-family: var(--font-accent);
+      font-size: 1.8rem;
+      color: var(--olive);
+      margin-bottom: 0.25rem;
+    }
     .story-facts .event p { margin-top:0.25rem; color: var(--charcoal); }
 
     /* Fun Facts styling */
@@ -67,7 +81,7 @@
     /* CTA strip */
     .cta-strip { background: var(--gold); text-align:center; padding:2rem 1rem; }
     .cta-strip h2 { font-family: var(--font-heading); font-size:2rem; color: var(--forest); margin-bottom:1rem; }
-    .cta-strip .btn { background: var(--forest); color: var(--cream); }
+    .cta-strip .btn { background: var(--forest); color: var(--cream); padding: 0.5rem 1.25rem; text-decoration: none; border-radius: 5px; font-weight: 600; }
     .cta-strip .btn:hover { background: var(--silver); color: var(--forest); }
 
     footer { background: var(--forest); color: var(--silver); text-align:center; padding:2rem; margin-top:2rem; }
@@ -159,4 +173,3 @@
   </footer>
 </body>
 </html>
-
