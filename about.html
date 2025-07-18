@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>If & When Events - About</title>
-  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
   <style>
     :root {
       --forest: #2D4C3A;
@@ -29,59 +29,70 @@
     nav a { color: var(--silver); text-decoration:none; font-weight:500; transition: color .3s; }
     nav a:hover { color: var(--gold); }
 
-    /* Hero */
     .hero { background-color: var(--eucalyptus); padding:6rem 2rem; text-align:center; }
     .hero-inner { display:inline-block; background: rgba(235,239,228,0.9); padding:3rem; border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,0.1); }
     .hero h1 { font-family: var(--font-heading); font-size:2.5rem; color: var(--forest); margin-bottom:0.5rem; }
     .hero p { font-size:1.25rem; color: var(--forest); margin-bottom:1rem; }
     .pull-quote { font-family: var(--font-accent); font-size:1.5rem; color: var(--olive); margin-top:1rem; }
 
-    /* Our Story & Fun Facts */
     .story-facts { display:flex; flex-wrap:wrap; gap:4rem; padding:4rem 2rem; }
     .story-facts > .timeline,
     .story-facts > .fun-facts { flex:1; position:relative; }
 
-    /* Timeline styling */
-    .story-facts .timeline { padding-left:2rem; }
-    .story-facts .timeline::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background: var(--eucalyptus); }
-    .story-facts .event { position: relative; margin-bottom:3rem; padding-left:2rem; }
-    .story-facts .event::before {
-      content: '';
-      position: absolute;
-      left: -8px;
-      top: 0.4rem;
-      width: 12px;
-      height: 12px;
-      background: var(--eucalyptus);
-      border-radius: 50%;
+    .story-facts .timeline::before,
+    .story-facts .fun-facts::before {
+      content:''; position:absolute; left:0; top:2.5rem; bottom:0;
+      width:4px; background: var(--eucalyptus);
     }
-    .story-facts .event h4 {
+
+    .timeline h4.section-title,
+    .fun-facts h4.section-title {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      color: var(--forest);
+      margin-bottom: 2rem;
+      padding-left: 2rem;
+    }
+
+    .event,
+    .fact-item {
+      position: relative;
+      padding: 1rem 0 1rem 2rem;
+    }
+
+    .event:not(:last-child),
+    .fact-item:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    .event::before,
+    .fact-item::before {
+      content:''; position:absolute; left:-8px;
+      top:calc(50% - 6px); width:12px; height:12px;
+      background: var(--eucalyptus); border-radius:50%;
+    }
+
+    .event h4 {
       font-family: var(--font-accent);
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       color: var(--olive);
       margin-bottom: 0.25rem;
     }
-    .story-facts .event p { margin-top:0.25rem; color: var(--charcoal); }
 
-    /* Fun Facts styling */
-    .story-facts .fun-facts { padding-left:2rem; }
-    .story-facts .fun-facts::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background: var(--eucalyptus); }
-    .story-facts .fun-facts h4 { font-family: var(--font-heading); font-size:1.75rem; color: var(--forest); margin-bottom:1rem; }
-    .fact-item { position:relative; padding:1rem 0 1rem 2rem; }
-    .fact-item:not(:last-child) { margin-bottom:2rem; }
-    .fact-item::before { content:''; position:absolute; left:-8px; top:calc(50% - 6px); width:12px; height:12px; background: var(--eucalyptus); border-radius:50%; }
+    .event p,
+    .fact-item p {
+      color: var(--charcoal);
+    }
 
-    /* Values grid */
     .values { display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:2rem; padding:4rem 2rem; }
     .value-card { background: var(--olive); color: var(--cream); padding:2rem; border-radius:8px; text-align:center; box-shadow:0 4px 16px rgba(0,0,0,0.08); transition: transform .3s, background .3s; }
     .value-card:hover { transform: translateY(-5px); background: var(--silver); color: var(--forest); }
     .value-card .icon { font-size:2rem; margin-bottom:0.5rem; color: var(--gold); }
     .value-card h4 { font-family: var(--font-heading); margin-bottom:0.5rem; }
 
-    /* CTA strip */
     .cta-strip { background: var(--gold); text-align:center; padding:2rem 1rem; }
     .cta-strip h2 { font-family: var(--font-heading); font-size:2rem; color: var(--forest); margin-bottom:1rem; }
-    .cta-strip .btn { background: var(--forest); color: var(--cream); padding: 0.5rem 1.25rem; text-decoration: none; border-radius: 5px; font-weight: 600; }
+    .cta-strip .btn { background: var(--forest); color: var(--cream); padding: 0.75rem 1.5rem; text-decoration: none; font-weight: 600; border-radius: 6px; transition: background 0.3s; }
     .cta-strip .btn:hover { background: var(--silver); color: var(--forest); }
 
     footer { background: var(--forest); color: var(--silver); text-align:center; padding:2rem; margin-top:2rem; }
@@ -101,7 +112,6 @@
     </ul>
   </nav>
 
-  <!-- Hero -->
   <section class="hero">
     <div class="hero-inner">
       <h1>Our Story</h1>
@@ -110,10 +120,9 @@
     </div>
   </section>
 
-  <!-- Story & Fun Facts -->
   <div class="story-facts">
-    <!-- Timeline -->
     <div class="timeline">
+      <h4 class="section-title">Moments That Made Us</h4>
       <div class="event">
         <h4>First Date</h4>
         <p>Our journey began with a spark of possibility.</p>
@@ -128,16 +137,14 @@
       </div>
     </div>
 
-    <!-- Fun Facts -->
     <div class="fun-facts">
-      <h4>Fun Facts About Us</h4>
+      <h4 class="section-title">Fun Facts About Us</h4>
       <div class="fact-item"><p><strong>5+ Years Together</strong></p></div>
       <div class="fact-item"><p><strong>75+ Events Planned</strong></p></div>
       <div class="fact-item"><p><strong>100% Client Smiles</strong></p></div>
     </div>
   </div>
 
-  <!-- Values -->
   <div class="values">
     <div class="value-card">
       <div class="icon">✦</div>
@@ -161,7 +168,6 @@
     </div>
   </div>
 
-  <!-- CTA Strip -->
   <div class="cta-strip">
     <h2>Ready to plan your moment?</h2>
     <a href="contact.html" class="btn">Let’s Chat</a>
