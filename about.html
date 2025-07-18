@@ -93,6 +93,46 @@
     .event::before { content:''; position:absolute; left:-8px; top:0; width:20px; height:20px; background: var(--silver); border-radius:50%; }
     .event h4 { font-family: var(--font-heading); font-size:1.5rem; color: var(--forest); display:inline-block; margin-right:0.5rem; }
     .event p { margin-top:0.25rem; color: var(--charcoal); }
+    .timeline {
+  position: relative; /* already in place */
+  /* … */
+}
+
+/* Fun Facts sidebar */
+.fun-facts {
+  position: absolute;
+  top: 10%;
+  right: 2rem;
+  width: 180px;
+  background: var(--cream);
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+  z-index: 1;
+}
+
+.fun-facts h5 {
+  margin-bottom: 0.5rem;
+  color: var(--olive);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+}
+
+.fun-facts ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.fun-facts li {
+  margin-bottom: 0.5rem;
+}
+
+.fun-facts strong {
+  color: var(--forest);
+}
+
+    
 
     /* Values grid */
     .values { display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:2rem; padding:4rem 2rem; }
@@ -162,6 +202,14 @@
     <div class="event">
       <h4>If &amp; When Events Founded</h4><p>Turning “ifs” into “whens” for our clients’ dreams.</p>
     </div>
+    <aside class="fun-facts">
+    <h5>Fun Facts About Us</h5>
+    <ul>
+      <li><strong>5+</strong> Years Together</li>
+      <li><strong>75+</strong> Events Planned</li>
+      <li><strong>100%</strong> Client Smiles</li>
+    </ul>
+  </aside>
   </div>
 
   <!-- Values -->
