@@ -20,12 +20,8 @@
       --font-body: 'Poppins', sans-serif;
       --font-accent: 'Allura', cursive;
     }
-
-    /* Reset */
     * { margin:0; padding:0; box-sizing:border-box; }
     body { font-family: var(--font-body); background: linear-gradient(to bottom, var(--cream), var(--taupe)); color: var(--charcoal); }
-
-    /* Header & Nav */
     header { background-color: var(--forest); padding: 1.5rem; text-align: center; }
     .logo { font-family: var(--font-heading); font-size: 2.5rem; color: var(--silver); }
     nav { position: sticky; top:0; background: rgba(74,74,74,0.85); backdrop-filter: blur(8px); z-index: 100; padding: 0.75rem 0; }
@@ -40,116 +36,33 @@
     .hero p { font-size:1.25rem; color: var(--forest); margin-bottom:1rem; }
     .pull-quote { font-family: var(--font-accent); font-size:1.5rem; color: var(--olive); margin-top:1rem; }
 
-    /* Profiles */
-    .profiles { display:flex; flex-wrap:wrap; gap:4rem; padding:4rem 2rem; justify-content:center; }
-    .profile { flex:1 1 300px; display:flex; align-items:center; gap:2rem; }
-    .profile:nth-of-type(even) { background-color: var(--taupe); padding:2rem; border-radius:8px; }
-    .profile img { width:200px; height:200px; object-fit:cover; border-radius:50%; border:4px solid var(--silver); }
-    .profile-content h3 { font-family: var(--font-heading); font-size:1.75rem; color: var(--forest); }
-    .profile-content p { margin-top:0.5rem; line-height:1.6; }
+    /* Our Story & Fun Facts */
+    .story-facts { display:flex; flex-wrap:wrap; gap:4rem; padding:4rem 2rem; }
+    .story-facts > .timeline,
+    .story-facts > .fun-facts { flex:1; position:relative; }
 
-    /* Two-column timeline + fun-facts */
-    .about-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      padding: 4rem 2rem;
-      align-items: start;
-    }
+    /* Timeline styling */
+    .story-facts .timeline { padding-left:2rem; }
+    .story-facts .timeline::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background: var(--eucalyptus); }
+    .story-facts .event { position: relative; margin-bottom:3rem; padding-left:2rem; }
+    .story-facts .event::before { content:''; position:absolute; left:-8px; top:0; width:20px; height:20px; background: var(--eucalyptus); border-radius:50%; }
+    .story-facts .event h4 { font-family: var(--font-heading); font-size:1.5rem; color: var(--forest); display:inline-block; margin-right:0.5rem; }
+    .story-facts .event p { margin-top:0.25rem; color: var(--charcoal); }
 
-    /* Timeline */
-    .timeline-container { position: relative; padding-left: 2rem; }
-    .timeline-container::before {
-      content: '';
-      position: absolute;
-      left: 2rem;
-      top: 3rem;
-      bottom: 3rem;
-      width: 4px;
-      background: var(--eucalyptus);
-    }
-    .timeline-container h2 {
-      font-family: var(--font-heading);
-      font-size: 2rem;
-      color: var(--forest);
-      margin-bottom: 1.5rem;
-    }
-    .timeline-event {
-      position: relative;
-      margin-bottom: 2.5rem;
-      padding-left: 2rem;
-    }
-    .timeline-event::before {
-      content: '';
-      position: absolute;
-      left: 2rem;
-      top: 0.5rem;
-      transform: translateX(-50%);
-      width: 0.75rem;
-      height: 0.75rem;
-      background: var(--eucalyptus);
-      border-radius: 50%;
-    }
-    .timeline-event h4 {
-      font-family: var(--font-accent);
-      color: var(--olive);
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .timeline-event p {
-      margin: 0;
-      color: var(--charcoal);
-    }
+    /* Fun Facts styling */
+    .story-facts .fun-facts { padding-left:2rem; }
+    .story-facts .fun-facts::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background: var(--eucalyptus); }
+    .story-facts .fun-facts h4 { font-family: var(--font-heading); font-size:1.75rem; color: var(--forest); margin-bottom:1rem; }
+    .fact-item { position:relative; padding:1rem 0 1rem 2rem; }
+    .fact-item:not(:last-child) { margin-bottom:2rem; }
+    .fact-item::before { content:''; position:absolute; left:-8px; top:calc(50% - 6px); width:12px; height:12px; background: var(--eucalyptus); border-radius:50%; }
 
-    /* Fun Facts */
-    .fun-facts-container {
-      position: relative;
-      background: rgba(235,239,228,0.9);
-      border-radius: 8px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-      padding: 2rem;
-    }
-    .fun-facts-container::before {
-      content: '';
-      position: absolute;
-      left: 2rem;
-      top: 3rem;
-      bottom: 3rem;
-      width: 4px;
-      background: var(--eucalyptus);
-    }
-    .fun-facts-container h2 {
-      font-family: var(--font-heading);
-      font-size: 2rem;
-      color: var(--forest);
-      margin-bottom: 1.5rem;
-      padding-left: 0.5rem;
-    }
-    .fun-facts-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .fun-facts-list li {
-      position: relative;
-      margin-bottom: 1.5rem;
-      padding-left: 1.5rem;
-      font-size: 1.25rem;
-      color: var(--charcoal);
-    }
-    .fun-facts-list li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.6rem;
-      width: 0.75rem;
-      height: 0.75rem;
-      background: var(--eucalyptus);
-      border-radius: 50%;
-    }
-    .fun-facts-list li strong {
-      color: var(--forest);
-    }
+    /* Values grid */
+    .values { display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:2rem; padding:4rem 2rem; }
+    .value-card { background: var(--olive); color: var(--cream); padding:2rem; border-radius:8px; text-align:center; box-shadow:0 4px 16px rgba(0,0,0,0.08); transition: transform .3s, background .3s; }
+    .value-card:hover { transform: translateY(-5px); background: var(--silver); color: var(--forest); }
+    .value-card .icon { font-size:2rem; margin-bottom:0.5rem; color: var(--gold); }
+    .value-card h4 { font-family: var(--font-heading); margin-bottom:0.5rem; }
 
     /* CTA strip */
     .cta-strip { background: var(--gold); text-align:center; padding:2rem 1rem; }
@@ -157,13 +70,12 @@
     .cta-strip .btn { background: var(--forest); color: var(--cream); }
     .cta-strip .btn:hover { background: var(--silver); color: var(--forest); }
 
-    /* Footer */
     footer { background: var(--forest); color: var(--silver); text-align:center; padding:2rem; margin-top:2rem; }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">If & When Events</div>
+    <div class="logo">If &amp; When Events</div>
   </header>
   <nav>
     <ul>
@@ -184,52 +96,58 @@
     </div>
   </section>
 
-  <!-- Team Profiles -->
-  <div class="profiles">
-    <div class="profile">
-      <img src="images/alaina.jpg" alt="Alaina portrait">
-      <div class="profile-content">
-        <h3>The Creative Designer</h3>
-        <p>Alaina brings bold design and artistic vision to every event. With a background in fine arts and a passion for color, she transforms spaces into unforgettable experiences.</p>
-      </div>
-    </div>
-    <div class="profile">
-      <div class="profile-content">
-        <h3>The Analytical Maestro</h3>
-        <p>Alissa orchestrates logistics and timelines with musical precision. A former professional musician turned planner, she ensures every detail harmonizes perfectly.</p>
-      </div>
-      <img src="images/alissa.jpg" alt="Alissa portrait">
-    </div>
-  </div>
-
-  <!-- Timeline & Fun Facts -->
-  <section class="about-container">
-    <div class="timeline-container">
-      <h2>Our Timeline</h2>
-      <div class="timeline-event">
+  <!-- Story & Fun Facts -->
+  <div class="story-facts">
+    <!-- Timeline -->
+    <div class="timeline">
+      <div class="event">
         <h4>First Date</h4>
         <p>Our journey began with a spark of possibility.</p>
       </div>
-      <div class="timeline-event">
+      <div class="event">
         <h4>Wedding Day</h4>
         <p>We said “I do” and celebrated love and creativity.</p>
       </div>
-      <div class="timeline-event">
+      <div class="event">
         <h4>If &amp; When Events Founded</h4>
         <p>Turning “ifs” into “whens” for our clients’ dreams.</p>
       </div>
     </div>
-    <div class="fun-facts-container">
-      <h2>Fun Facts About Us</h2>
-      <ul class="fun-facts-list">
-        <li><strong>5+</strong> Years Together</li>
-        <li><strong>75+</strong> Events Planned</li>
-        <li><strong>100%</strong> Client Smiles</li>
-      </ul>
-    </div>
-  </section>
 
-  <!-- CTA -->
+    <!-- Fun Facts -->
+    <div class="fun-facts">
+      <h4>Fun Facts About Us</h4>
+      <div class="fact-item"><p><strong>5+ Years Together</strong></p></div>
+      <div class="fact-item"><p><strong>75+ Events Planned</strong></p></div>
+      <div class="fact-item"><p><strong>100% Client Smiles</strong></p></div>
+    </div>
+  </div>
+
+  <!-- Values -->
+  <div class="values">
+    <div class="value-card">
+      <div class="icon">✦</div>
+      <h4>Balance</h4>
+      <p>Harmony between creativity and structure.</p>
+    </div>
+    <div class="value-card">
+      <div class="icon">✿</div>
+      <h4>Creativity</h4>
+      <p>Original design that reflects your story.</p>
+    </div>
+    <div class="value-card">
+      <div class="icon">⚙</div>
+      <h4>Precision</h4>
+      <p>Flawless execution down to every detail.</p>
+    </div>
+    <div class="value-card">
+      <div class="icon">♥</div>
+      <h4>Joy</h4>
+      <p>Moments crafted to inspire and delight.</p>
+    </div>
+  </div>
+
+  <!-- CTA Strip -->
   <div class="cta-strip">
     <h2>Ready to plan your moment?</h2>
     <a href="contact.html" class="btn">Let’s Chat</a>
@@ -241,3 +159,4 @@
   </footer>
 </body>
 </html>
+
